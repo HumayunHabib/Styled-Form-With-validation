@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Form with Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="./assets/logo.svg"
+      type="image/x-icon"
+      sizes="32x32"
+    />
+    <style>
+      body {
+        font-family: "Inter", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #ebf0ff;
+      }
+      header {
+        background-color: transparent;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header img {
+        width: 50px; /* Adjust the width as needed */
+        height: auto;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+      }
+
+      nav a {
+        color: #515151;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+        margin: 0 15px;
+      }
+
+      nav button {
+        background-color: #46b0e6;
+        color: #fff;
+        padding: 10px 15px;
+        border: 1px solid #46b0e6;
+        border-radius: 40px;
+        box-shadow: 0px 10px 40px 0px rgba(70, 176, 230, 0.7);
+        cursor: pointer;
+      }
+
+      nav button:hover {
+        background-color: #2697d4;
+        border-color: #2697d4;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      form {
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0px 34px 44px -20px rgba(185, 206, 234, 0.25);
+        padding: 20px;
+        width: 300px; /* Adjust the width as needed */
+        margin: 0 auto; /* Center the form on the page */
+      }
+
+      h1 {
+        color: #000;
+        font-family: "Inter";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      p {
+        color: #515151;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      label.required::after {
+        content: " *";
+        color: red;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid #dee6ff;
+        background: #f9faff;
+      }
+
+      .error {
+        color: red;
+      }
+
+      button {
+        background-color: #f89d21;
+        color: #fff;
+        padding: 10px 15px;
+        border: 1px solid #f89d21;
+        border-radius: 40px;
+        box-shadow: 0px 10px 34px 0px rgba(248, 157, 33, 0.5);
+        cursor: pointer;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: #ffa533;
+        border-color: #ffa533;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/logoj.svg" alt="Logo" />
+      <nav>
+        <a href="#about-us">About Us</a>
+        <a href="#registration">Registration</a>
+        <a href="#careers">Careers</a>
+        <button>Contact Us</button>
+      </nav>
+    </header>
+    <div class="container">
+      <form id="myForm">
+        <h1>Registration</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in
+          tristique senectus dui pharetra sit.
+        </p>
+
+        <label for="name" class="required">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+        <span id="nameError" class="error"></span>
+
+        <label for="company">Company:</label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          placeholder="Enter your company name"
+          required
+        />
+        <span id="companyError" class="error"></span>
+
+        <label for="email" class="required">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+          required
+        />
+        <span id="emailError" class="error"></span>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          // Validation logic here
+          const nameInput = document.getElementById("name");
+          const nameError = document.getElementById("nameError");
+          if (!nameInput.checkValidity()) {
+            nameError.textContent = "Please enter your name.";
+            event.preventDefault();
+          } else {
+            nameError.textContent = "";
+          }
+
+          const companyInput = document.getElementById("company");
+          const companyError = document.getElementById("companyError");
+          if (!companyInput.checkValidity()) {
+            companyError.textContent = "Please enter your company name.";
+            event.preventDefault();
+          } else {
+            companyError.textContent = "";
+          }
+
+          const emailInput = document.getElementById("email");
+          const emailError = document.getElementById("emailError");
+          if (!emailInput.checkValidity()) {
+            emailError.textContent = "Please enter a valid email address.";
+            event.preventDefault();
+          } else {
+            emailError.textContent = "";
+          }
+
+          // Additional name and email validations
+          const nameRegex = /^[a-zA-Z\s]+$/;
+          if (!nameRegex.test(nameInput.value)) {
+            nameError.textContent = "Invalid name format.";
+            event.preventDefault();
+          }
+
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(emailInput.value)) {
+            emailError.textContent = "Invalid email format.";
+            event.preventDefault();
+          }
+        });
+    </script>
+  </body>
+</html>
