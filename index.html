@@ -30,8 +30,15 @@
         margin: 0 auto;
         padding: 20px;
       }
-      /* Header styles */
-      header {
+      .logo {
+        width: 55px;
+        height: 34px;
+        flex-shrink: 0;
+        cursor: pointer;
+      }
+      /* Header and footer styles */
+      header,
+      footer {
         background-color: transparent;
         color: #fff;
         padding: 10px 10px;
@@ -40,8 +47,9 @@
         align-items: center;
       }
 
-      header img {
-        width: 50px; /* Adjust the width as needed */
+      header img,
+      footer img {
+        width: 50px;
         height: auto;
       }
 
@@ -58,55 +66,11 @@
         font-weight: 400;
         line-height: normal;
         text-decoration: none;
-        margin: 0 15px;
-        white-space: nowrap; /* Prevents text from wrapping */
+        margin: 4px 15px;
+        white-space: nowrap;
       }
 
-      nav button {
-        background-color: #46b0e6;
-        color: #fff;
-        padding: 10px 15px;
-        border: 1px solid #46b0e6;
-        border-radius: 40px;
-        box-shadow: 0px 10px 40px 0px rgba(70, 176, 230, 0.7);
-        cursor: pointer;
-      }
-
-      nav button:hover {
-        background-color: #2697d4;
-        border-color: #2697d4;
-      }
-      footer {
-        background-color: transparent;
-        color: #fff;
-        padding: 10px 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      footer img {
-        width: 50px; /* Adjust the width as needed */
-        height: auto;
-      }
-
-      footer nav {
-        display: flex;
-        align-items: center;
-      }
-
-      footer nav a {
-        color: #515151;
-        font-family: "Inter";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-decoration: none;
-        margin: 0 15px;
-        white-space: nowrap; /* Prevents text from wrapping */
-      }
-
+      header nav button,
       footer nav button {
         background-color: #46b0e6;
         color: #fff;
@@ -115,32 +79,21 @@
         border-radius: 40px;
         box-shadow: 0px 10px 40px 0px rgba(70, 176, 230, 0.7);
         cursor: pointer;
+        max-width: 150px;
+        min-width: 140px;
       }
 
+      nav button:hover,
       footer nav button:hover {
         background-color: #2697d4;
         border-color: #2697d4;
-      }
-      /* Responsive styles */
-      @media screen and (max-width: 768px) {
-        footer {
-          flex-direction: column;
-          text-align: center;
-        }
-        header {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        nav {
-          margin-top: 10px;
-        }
       }
 
       .form-section {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin: 20px 0px;
       }
       .formContainer {
         /* display: flex; */
@@ -161,31 +114,34 @@
         border-radius: 10px;
         background: #fff;
         box-shadow: 0px 34px 44px -20px rgba(185, 206, 234, 0.25);
-        padding: 20px;
-        max-width: 500px; /* Adjust the width as needed */
-        margin: 0 auto; /* Center the form on the page */
+        padding: 48px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      form button {
+        margin-top: 48px;
       }
 
-      h1 {
+      form h1 {
         color: #000;
         font-family: "Inter";
         font-size: 36px;
         font-style: normal;
         font-weight: 800;
         line-height: normal;
-        text-align: center;
+        text-align: left;
         margin-bottom: 16px;
-        word-wrap: break-word;
+        word-break: break-all;
       }
 
-      p {
+      form p {
         color: #515151;
         font-family: "Inter";
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
-        text-align: center;
+        text-align: left;
         margin-bottom: 24px;
       }
 
@@ -249,6 +205,7 @@
         justify-content: space-between;
         padding: 40px 0px;
         align-items: center;
+        margin-top: 100px;
       }
 
       .banner-left {
@@ -323,9 +280,10 @@
         background: #f6fbf8;
         box-shadow: 0px 34px 44px -20px rgba(185, 206, 234, 0.25);
         padding: 20px 0px;
-        margin: 20px 0px;
+
         display: flex;
         justify-content: space-between;
+        margin: 100px 0px;
       }
 
       /* Card styles */
@@ -373,12 +331,13 @@
       /* Trusted Section styles */
       .trusted-section {
         text-align: center;
-        padding: 40px;
+        padding: 0px;
         background-color: transparent;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-top: 100px;
       }
 
       .trusted-section div {
@@ -417,14 +376,14 @@
       /* Slider styles */
       .slider-section {
         text-align: center;
-        padding: 40px;
+        padding: 0px 40px;
         position: relative;
+        margin-bottom: 100px;
         /* background-color: #f6fbf8; */
       }
 
       .slider-container {
         display: flex;
-
         overflow: hidden;
         max-width: 100%;
         margin: 20px 0;
@@ -484,9 +443,33 @@
       .next-arrow {
         right: 0;
       }
+
+      /* footer section */
+      .footer-section {
+        border-top: 1px solid #cbcbcb;
+        padding: 32px 0px;
+      }
+      .footer-section p {
+        color: #515151;
+        font-family: "Inter";
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: left;
+      }
       /* Responsive styles */
 
       @media screen and (max-width: 768px) {
+        header,
+        footer {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        nav {
+          margin-top: 10px;
+        }
         .slider-item img {
           max-width: 150px; /* Set a maximum width for the images */
           /* height: auto; */
@@ -537,15 +520,22 @@
         footer {
           padding: 10px 0px;
         }
+
         header {
           padding: 10px 0px;
         }
+
         nav {
           flex-wrap: wrap;
           margin: 20px 0px;
+          align-items: baseline;
         }
+
         nav button {
           margin-top: 10px;
+        }
+        button {
+          width: 100%;
         }
       }
     </style>
@@ -553,7 +543,7 @@
   <body>
     <div class="container">
       <header>
-        <img src="./assets/logoj.svg" alt="Logo" />
+        <img class="logo" src="./assets/logo.svg" alt="Logo" />
         <nav>
           <a href="#about-us">About Us</a>
           <a href="#registration">Registration</a>
@@ -695,11 +685,6 @@
           <img src="./assets/formImage.svg" alt="Banner Image" />
         </div>
         <div class="formContainer">
-          <!-- <div class="form-left">
-  
-            <img src="./assets/formImage.svg" alt="Banner Image" />
-          </div> -->
-          <!-- <div class="form-right"> -->
           <form id="myForm">
             <h1>Registration</h1>
             <p>
@@ -743,15 +728,18 @@
         </div>
       </section>
       <!-- Footer -->
-      <footer>
-        <img src="./assets/logoj.svg" alt="Logo" />
-        <nav>
-          <a href="#about-us">About Us</a>
-          <a href="#registration">Registration</a>
-          <a href="#careers">Careers</a>
-          <button onclick="scrollToRegistration()">Contact Us</button>
-        </nav>
-      </footer>
+      <section class="footer-section">
+        <footer>
+          <img class="logo" src="./assets/logo.svg" alt="Logo" />
+          <nav>
+            <a href="#about-us">About Us</a>
+            <a href="#registration">Registration</a>
+            <a href="#careers">Careers</a>
+            <button onclick="scrollToRegistration()">Contact Us</button>
+          </nav>
+        </footer>
+        <p>Copyright © 2023 i2c inc. All rights reserved.</p>
+      </section>
     </div>
     <script>
       let currentIndex = 1; // Start at the second image (index 1)
@@ -782,51 +770,7 @@
         registrationSection.scrollIntoView({ behavior: "smooth" });
       }
     </script>
-    <!-- <script>
-      let currentIndex = 0;
-      const totalSlides = document.querySelectorAll(".slider-item").length;
 
-      function showSlide(index) {
-        const sliderWrapper = document.querySelector(".slider-wrapper");
-        const slideWidth = document.querySelector(".slider-item").clientWidth;
-        sliderWrapper.style.transform = `translateX(-${index * slideWidth}px)`;
-      }
-
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        showSlide(currentIndex);
-      }
-
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        showSlide(currentIndex);
-      }
-
-      // Automatically start the slider
-      setInterval(() => {
-        nextSlide();
-      }, 3000); // Change the interval (in milliseconds) as needed
-    </script> -->
-    <!-- <script>
-      let currentIndex = 0;
-      const totalSlides = document.querySelectorAll(".slider-item").length;
-
-      function showSlide(index) {
-        const sliderWrapper = document.querySelector(".slider-wrapper");
-        const slideWidth = document.querySelector(".slider-item").clientWidth;
-        sliderWrapper.style.transform = `translateX(-${index * slideWidth}px)`;
-      }
-
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        showSlide(currentIndex);
-      }
-
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        showSlide(currentIndex);
-      }
-    </script> -->
     <script>
       document
         .getElementById("myForm")
