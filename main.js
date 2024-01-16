@@ -1,4 +1,4 @@
-let currentIndex = 1; // Start at the second image (index 1)
+let currentIndex = 1;
 const totalSlides = document.querySelectorAll(".slider-item").length;
 
 function showSlide(index) {

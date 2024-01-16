@@ -76,9 +76,7 @@ footer nav button:hover {
   align-items: center;
   margin: 20px 0px;
 }
-.formContainer {
-  /* display: flex; */
-}
+
 .form-right {
   width: 60%;
   text-align: center;
@@ -188,7 +186,30 @@ button:hover {
   align-items: center;
   margin-top: 100px;
 }
-
+.mainHeading h1 {
+  color: #000;
+  font-family: "Inter";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.dolor {
+  margin: 0px 2px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #46b0e6;
+  font-family: "Inter";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.dolor img {
+  width: 130px;
+}
 .banner-left {
   width: 45%;
 }
@@ -225,10 +246,6 @@ button:hover {
   height: auto;
 }
 
-.profile-card .description {
-  /* flex: 1; */
-}
-
 .profile-card h3 {
   color: #000;
   font-family: "Inter";
@@ -249,12 +266,6 @@ button:hover {
   line-height: normal;
   margin: 8px 0 0;
   text-align: left;
-}
-
-.banner img {
-  /* max-width: 100%; */
-  /* height: auto; */
-  /* border-radius: 8px; */
 }
 
 /* Section styles */
@@ -278,6 +289,7 @@ button:hover {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card img {
@@ -444,6 +456,9 @@ button:hover {
 /* Responsive styles */
 
 @media screen and (max-width: 768px) {
+  .banner-right {
+    margin-top: 20px;
+  }
   header,
   footer {
     flex-direction: column;
@@ -519,5 +534,20 @@ button:hover {
   }
   button {
     width: 100%;
+  }
+  form h1,
+  form p {
+    text-align: center;
+  }
+  .card img {
+    margin-right: 0px;
+  }
+
+  .card h3 {
+    text-align: center;
+  }
+
+  .card p {
+    text-align: center;
   }
 }
