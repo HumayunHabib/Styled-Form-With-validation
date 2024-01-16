@@ -19,281 +19,209 @@
     />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <img class="logo" src="./assets/logo.svg" alt="Logo" />
-        <nav>
-          <a href="#about-us">About Us</a>
-          <a href="#registration">Registration</a>
-          <a href="#careers">Careers</a>
-          <button onclick="scrollToRegistration()">Contact Us</button>
-        </nav>
-      </header>
-      <section class="banner">
-        <!-- Left Column -->
-        <div class="banner-left">
-          <img
-            style="margin-bottom: 64px"
-            src="./assets/heading.svg"
-            alt="Andrew Schultz"
-          />
-          <!-- Profile Cards -->
-          <div class="profile-card">
-            <img src="./assets/image1.svg" alt="Andrew Schultz" />
-            <div class="description">
-              <h3>Andrew Schultz</h3>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae,
-                in tristique senectus dui pharetra sit.
-              </p>
-            </div>
-          </div>
-          <div class="profile-card">
-            <img src="./assets/image2.svg" alt="Andrew Schultz" />
-            <div class="description">
-              <h3>Andrew Schultz</h3>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae,
-                in tristique senectus dui pharetra sit.
-              </p>
-            </div>
-          </div>
-          <div class="profile-card no-margin-bottom">
-            <img src="./assets/image3.svg" alt="Andrew Schultz" />
-            <div class="description">
-              <h3>Andrew Schultz</h3>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae,
-                in tristique senectus dui pharetra sit.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column -->
-        <div class="banner-right">
-          <!-- Image -->
-          <img src="./assets/bannerImage.svg" alt="Banner Image" />
-        </div>
-      </section>
-      <!-- Styled Section with Cards -->
-      <section class="styled-section">
-        <!-- Card 1 -->
-        <div class="card">
-          <img src="./assets/lock.svg" alt="Card Image 1" />
-          <div>
-            <h3>24/7 Support</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="card">
-          <img src="./assets/signal.svg" alt="Card Image 1" />
-          <div>
-            <h3>1000+ of reviews</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="card">
-          <img src="./assets/trophy.svg" alt="Card Image 1" />
-          <div>
-            <h3>And more!</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-      </section>
-      <!-- Trusted Section -->
-      <section class="trusted-section">
-        <div>
-          <h2>Trusted by</h2>
-          <img src="./assets/line.svg" alt="Line Image" />
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in
-          tristique senectus dui pharetra sit.
-        </p>
-      </section>
-      <!-- Image Slider Section -->
-      <section class="slider-section">
-        <img
-          class="slider-arrow prev-arrow"
-          src="./assets/chevron-left.svg"
-          alt="Slider Image 1"
-          onclick="prevSlide()"
-        />
-
-        <div class="slider-container">
-          <div class="slider-wrapper">
-            <!-- Image 1 -->
-            <div class="slider-item">
-              <img src="./assets/Microsoftlogo.svg" alt="Slider Image 1" />
-            </div>
-            <!-- Image 2 -->
-            <div class="slider-item">
-              <img src="./assets/twitter.svg" alt="Slider Image 2" />
-            </div>
-            <!-- Image 3 -->
-            <div class="slider-item">
-              <img src="./assets/cola.svg" alt="Slider Image 3" />
-            </div>
-            <div class="slider-item">
-              <img src="./assets/Microsoftlogo.svg" alt="Slider Image 3" />
-            </div>
-            <div class="slider-item">
-              <img src="./assets/cola.svg" alt="Slider Image 3" />
-            </div>
-          </div>
-        </div>
-
-        <img
-          class="slider-arrow next-arrow"
-          src="./assets/chevron-right.svg"
-          alt="Slider Image 1"
-          onclick="nextSlide()"
-        />
-      </section>
-      <section class="form-section" id="registration">
-        <div class="form-left">
-          <img src="./assets/formImage.svg" alt="Banner Image" />
-        </div>
-        <div class="formContainer">
-          <form id="myForm">
-            <h1>Registration</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in
-              tristique senectus dui pharetra sit.
-            </p>
-
-            <label for="name" class="required">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              required
-            />
-            <span id="nameError" class="error"></span>
-
-            <label for="company">Company:</label>
-            <input
-              type="text"
-              id="company"
-              name="company"
-              placeholder="Enter your company name"
-              required
-            />
-            <span id="companyError" class="error"></span>
-
-            <label for="email" class="required">Email address:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email address"
-              required
-            />
-            <span id="emailError" class="error"></span>
-
-            <button type="submit">Submit</button>
-          </form>
-          <!-- </div> -->
-        </div>
-      </section>
-      <!-- Footer -->
-      <section class="footer-section">
-        <footer>
+    <main>
+      <div class="container">
+        <header>
           <img class="logo" src="./assets/logo.svg" alt="Logo" />
-          <nav>
+          <nav aria-label="Main Navigation">
             <a href="#about-us">About Us</a>
             <a href="#registration">Registration</a>
             <a href="#careers">Careers</a>
             <button onclick="scrollToRegistration()">Contact Us</button>
           </nav>
-        </footer>
-        <p>Copyright © 2023 i2c inc. All rights reserved.</p>
-      </section>
-    </div>
-    <script>
-      let currentIndex = 1; // Start at the second image (index 1)
-      const totalSlides = document.querySelectorAll(".slider-item").length;
+        </header>
+        <section class="banner">
+          <!-- Left Column -->
+          <div class="banner-left">
+            <img
+              style="margin-bottom: 64px"
+              src="./assets/heading.svg"
+              alt="Andrew Schultz"
+            />
+            <!-- Profile Cards -->
+            <div class="profile-card">
+              <img src="./assets/image1.svg" alt="Andrew Schultz" />
+              <div class="description">
+                <h3>Andrew Schultz</h3>
 
-      function showSlide(index) {
-        const sliderWrapper = document.querySelector(".slider-wrapper");
-        const slideWidth = document.querySelector(".slider-item").clientWidth;
-        sliderWrapper.style.transform = `translateX(-${index * slideWidth}px)`;
-      }
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vitae, in tristique senectus dui pharetra sit.
+                </p>
+              </div>
+            </div>
+            <div class="profile-card">
+              <img src="./assets/image2.svg" alt="Andrew Schultz" />
+              <div class="description">
+                <h3>Andrew Schultz</h3>
 
-      function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        showSlide(currentIndex);
-      }
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vitae, in tristique senectus dui pharetra sit.
+                </p>
+              </div>
+            </div>
+            <div class="profile-card no-margin-bottom">
+              <img src="./assets/image3.svg" alt="Andrew Schultz" />
+              <div class="description">
+                <h3>Andrew Schultz</h3>
 
-      function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        showSlide(currentIndex);
-      }
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vitae, in tristique senectus dui pharetra sit.
+                </p>
+              </div>
+            </div>
+          </div>
 
-      // Initially show the second image
-      showSlide(currentIndex);
-    </script>
-    <script>
-      function scrollToRegistration() {
-        const registrationSection = document.getElementById("registration");
-        registrationSection.scrollIntoView({ behavior: "smooth" });
-      }
-    </script>
+          <!-- Right Column -->
+          <div class="banner-right">
+            <!-- Image -->
+            <img src="./assets/bannerImage.svg" alt="Banner Image" />
+          </div>
+        </section>
+        <!-- Styled Section with Cards -->
+        <section class="styled-section">
+          <!-- Card 1 -->
+          <div class="card">
+            <img src="./assets/lock.svg" alt="Card Image 1" />
+            <div>
+              <h3>24/7 Support</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+          </div>
 
-    <script>
-      document
-        .getElementById("myForm")
-        .addEventListener("submit", function (event) {
-          // Validation logic here
-          const nameInput = document.getElementById("name");
-          const nameError = document.getElementById("nameError");
-          if (!nameInput.checkValidity()) {
-            nameError.textContent = "Please enter your name.";
-            event.preventDefault();
-          } else {
-            nameError.textContent = "";
-          }
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="./assets/signal.svg" alt="Card Image 1" />
+            <div>
+              <h3>1000+ of reviews</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
 
-          const companyInput = document.getElementById("company");
-          const companyError = document.getElementById("companyError");
-          if (!companyInput.checkValidity()) {
-            companyError.textContent = "Please enter your company name.";
-            event.preventDefault();
-          } else {
-            companyError.textContent = "";
-          }
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="./assets/trophy.svg" alt="Card Image 1" />
+            <div>
+              <h3>And more!</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </section>
+        <!-- Trusted Section -->
+        <section class="trusted-section">
+          <div>
+            <h2>Trusted by</h2>
+            <img src="./assets/line.svg" alt="Line Image" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in
+            tristique senectus dui pharetra sit.
+          </p>
+        </section>
+        <!-- Image Slider Section -->
+        <section class="slider-section">
+          <img
+            class="slider-arrow prev-arrow"
+            src="./assets/chevron-left.svg"
+            alt="Slider Image 1"
+            onclick="prevSlide()"
+          />
 
-          const emailInput = document.getElementById("email");
-          const emailError = document.getElementById("emailError");
-          if (!emailInput.checkValidity()) {
-            emailError.textContent = "Please enter a valid email address.";
-            event.preventDefault();
-          } else {
-            emailError.textContent = "";
-          }
+          <div class="slider-container">
+            <div class="slider-wrapper">
+              <!-- Image 1 -->
+              <div class="slider-item">
+                <img src="./assets/Microsoftlogo.svg" alt="Slider Image 1" />
+              </div>
+              <!-- Image 2 -->
+              <div class="slider-item">
+                <img src="./assets/twitter.svg" alt="Slider Image 2" />
+              </div>
+              <!-- Image 3 -->
+              <div class="slider-item">
+                <img src="./assets/cola.svg" alt="Slider Image 3" />
+              </div>
+              <div class="slider-item">
+                <img src="./assets/Microsoftlogo.svg" alt="Slider Image 3" />
+              </div>
+              <div class="slider-item">
+                <img src="./assets/cola.svg" alt="Slider Image 3" />
+              </div>
+            </div>
+          </div>
 
-          // Additional name and email validations
-          const nameRegex = /^[a-zA-Z\s]+$/;
-          if (!nameRegex.test(nameInput.value)) {
-            nameError.textContent = "Invalid name format.";
-            event.preventDefault();
-          }
+          <img
+            class="slider-arrow next-arrow"
+            src="./assets/chevron-right.svg"
+            alt="Slider Image 1"
+            onclick="nextSlide()"
+          />
+        </section>
+        <section class="form-section" id="registration">
+          <div class="form-left">
+            <img src="./assets/formImage.svg" alt="Banner Image" />
+          </div>
+          <div class="formContainer">
+            <form id="myForm">
+              <h1>Registration</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae,
+                in tristique senectus dui pharetra sit.
+              </p>
 
-          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailRegex.test(emailInput.value)) {
-            emailError.textContent = "Invalid email format.";
-            event.preventDefault();
-          }
-        });
-    </script>
+              <label for="name" class="required">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+              <span id="nameError" class="error"></span>
+
+              <label for="company">Company:</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="Enter your company name"
+                required
+              />
+              <span id="companyError" class="error"></span>
+
+              <label for="email" class="required">Email address:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+              <span id="emailError" class="error"></span>
+
+              <button type="submit">Submit</button>
+            </form>
+            <!-- </div> -->
+          </div>
+        </section>
+        <!-- Footer -->
+        <section class="footer-section">
+          <footer>
+            <img class="logo" src="./assets/logo.svg" alt="Logo" />
+            <nav aria-label="Footer Navigation">
+              <a href="#about-us">About Us</a>
+              <a href="#registration">Registration</a>
+              <a href="#careers">Careers</a>
+              <button onclick="scrollToRegistration()">Contact Us</button>
+            </nav>
+          </footer>
+          <p>Copyright © 2023 i2c inc. All rights reserved.</p>
+        </section>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
   </body>
 </html>
