@@ -22,11 +22,19 @@
         margin: 0;
         padding: 0;
         background: #ebf0ff;
+
+        box-sizing: border-box;
       }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      /* Header styles */
       header {
         background-color: transparent;
         color: #fff;
-        padding: 10px;
+        padding: 10px 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -51,6 +59,7 @@
         line-height: normal;
         text-decoration: none;
         margin: 0 15px;
+        white-space: nowrap; /* Prevents text from wrapping */
       }
 
       nav button {
@@ -67,19 +76,93 @@
         background-color: #2697d4;
         border-color: #2697d4;
       }
-      .container {
+      footer {
+        background-color: transparent;
+        color: #fff;
+        padding: 10px 10px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        height: 100vh;
       }
 
+      footer img {
+        width: 50px; /* Adjust the width as needed */
+        height: auto;
+      }
+
+      footer nav {
+        display: flex;
+        align-items: center;
+      }
+
+      footer nav a {
+        color: #515151;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+        margin: 0 15px;
+        white-space: nowrap; /* Prevents text from wrapping */
+      }
+
+      footer nav button {
+        background-color: #46b0e6;
+        color: #fff;
+        padding: 10px 15px;
+        border: 1px solid #46b0e6;
+        border-radius: 40px;
+        box-shadow: 0px 10px 40px 0px rgba(70, 176, 230, 0.7);
+        cursor: pointer;
+      }
+
+      footer nav button:hover {
+        background-color: #2697d4;
+        border-color: #2697d4;
+      }
+      /* Responsive styles */
+      @media screen and (max-width: 768px) {
+        footer {
+          flex-direction: column;
+          text-align: center;
+        }
+        header {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        nav {
+          margin-top: 10px;
+        }
+      }
+
+      .form-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .formContainer {
+        /* display: flex; */
+      }
+      .form-right {
+        width: 60%;
+        text-align: center;
+      }
+      .form-left {
+        width: 40%;
+        text-align: center;
+      }
+      .form-left img {
+        max-width: 80%;
+        text-align: center;
+      }
       form {
         border-radius: 10px;
         background: #fff;
         box-shadow: 0px 34px 44px -20px rgba(185, 206, 234, 0.25);
         padding: 20px;
-        width: 300px; /* Adjust the width as needed */
+        max-width: 500px; /* Adjust the width as needed */
         margin: 0 auto; /* Center the form on the page */
       }
 
@@ -92,6 +175,7 @@
         line-height: normal;
         text-align: center;
         margin-bottom: 16px;
+        word-wrap: break-word;
       }
 
       p {
@@ -108,6 +192,14 @@
       label {
         display: block;
         margin-bottom: 8px;
+        text-align: left;
+        color: #000;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        /* text-align: left; */
       }
 
       label.required::after {
@@ -117,14 +209,16 @@
 
       input {
         width: 100%;
-        padding: 8px;
+        padding: 16px;
         margin-bottom: 16px;
         box-sizing: border-box;
         border-radius: 5px;
         border: 1px solid #dee6ff;
         background: #f9faff;
       }
-
+      input:focus-visible {
+        outline: 2px solid #dee6ff;
+      }
       .error {
         color: red;
       }
@@ -142,67 +236,597 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        width: 100%;
+        width: 33%;
       }
 
       button:hover {
         background-color: #ffa533;
         border-color: #ffa533;
       }
+      /* Banner styles */
+      .banner {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0px;
+        align-items: center;
+      }
+
+      .banner-left {
+        width: 50%;
+      }
+
+      .banner-right {
+        width: 50%;
+        text-align: center;
+      }
+
+      .banner-left img {
+        max-width: 100%;
+      }
+      .banner-right img {
+        max-width: 80%;
+      }
+
+      .profile-card {
+        border-radius: 10px;
+        background: #f6fbf8;
+        box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(2px);
+        padding: 16px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+      }
+
+      .profile-card img {
+        border-radius: 50%;
+        margin-right: 16px;
+        max-width: 80px; /* Adjust the width as needed */
+        height: auto;
+      }
+
+      .profile-card .description {
+        /* flex: 1; */
+      }
+
+      .profile-card h3 {
+        color: #000;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 0;
+        text-align: left;
+      }
+
+      .profile-card p {
+        color: #515151;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 8px 0 0;
+        text-align: left;
+      }
+
+      .banner img {
+        /* max-width: 100%; */
+        /* height: auto; */
+        /* border-radius: 8px; */
+      }
+
+      /* Section styles */
+      .styled-section {
+        border-radius: 10px;
+        background: #f6fbf8;
+        box-shadow: 0px 34px 44px -20px rgba(185, 206, 234, 0.25);
+        padding: 20px 0px;
+        margin: 20px 0px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* Card styles */
+      .card {
+        width: calc(33.33% - 20px); /* Adjust the width as needed */
+        background: transparent;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .card img {
+        width: 64px;
+        height: 64px;
+        flex-shrink: 0;
+        margin-right: 16px;
+        object-fit: cover;
+      }
+      .card div {
+        flex: 1;
+      }
+      .card h3 {
+        color: #f89d21;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+        text-align: left;
+      }
+
+      .card p {
+        color: #515151;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 8px 0 0;
+        text-align: left;
+      }
+      /* Trusted Section styles */
+      .trusted-section {
+        text-align: center;
+        padding: 40px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .trusted-section div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+
+      .trusted-section img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 0px;
+      }
+
+      .trusted-section h2 {
+        color: #000;
+        font-family: "Inter";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        margin: 0;
+      }
+
+      .trusted-section p {
+        color: #515151;
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        max-width: 400px;
+      }
+      /* Slider styles */
+      .slider-section {
+        text-align: center;
+        padding: 40px;
+        position: relative;
+        /* background-color: #f6fbf8; */
+      }
+
+      .slider-container {
+        display: flex;
+
+        overflow: hidden;
+        max-width: 100%;
+        margin: 20px 0;
+      }
+
+      .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        align-items: center;
+      }
+
+      .slider-item {
+        flex: 0 0 auto;
+        width: 29%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .slider-item img {
+        max-width: 300px; /* Set a maximum width for the images */
+        /* height: auto; */
+      }
+
+      .slider-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .slider-nav button {
+        background-color: #46b0e6;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
+      }
+      .slider-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        outline: none;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .prev-arrow {
+        left: 0;
+      }
+
+      .next-arrow {
+        right: 0;
+      }
+      /* Responsive styles */
+
+      @media screen and (max-width: 768px) {
+        .slider-item img {
+          max-width: 150px; /* Set a maximum width for the images */
+          /* height: auto; */
+        }
+        .form-left {
+          width: 100%;
+          text-align: center;
+        }
+        .form-left img {
+          max-width: 80%;
+          text-align: center;
+          margin: 20px 0px;
+        }
+        .form-section {
+          flex-direction: column;
+        }
+        .banner {
+          flex-direction: column;
+          text-align: center;
+          padding: 0px;
+        }
+
+        .banner-left,
+        .banner-right {
+          width: 100%;
+        }
+        .profile-card {
+          flex-direction: column;
+        }
+        .profile-card h3 {
+          text-align: center;
+        }
+
+        .profile-card p {
+          text-align: center;
+        }
+        .profile-card img {
+          margin-right: 0px;
+        }
+        .styled-section {
+          flex-direction: column;
+        }
+        .styled-section .card {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 575px) {
+        footer {
+          padding: 10px 0px;
+        }
+        header {
+          padding: 10px 0px;
+        }
+        nav {
+          flex-wrap: wrap;
+          margin: 20px 0px;
+        }
+        nav button {
+          margin-top: 10px;
+        }
+      }
     </style>
   </head>
   <body>
-    <header>
-      <img src="./assets/logoj.svg" alt="Logo" />
-      <nav>
-        <a href="#about-us">About Us</a>
-        <a href="#registration">Registration</a>
-        <a href="#careers">Careers</a>
-        <button>Contact Us</button>
-      </nav>
-    </header>
     <div class="container">
-      <form id="myForm">
-        <h1>Registration</h1>
+      <header>
+        <img src="./assets/logoj.svg" alt="Logo" />
+        <nav>
+          <a href="#about-us">About Us</a>
+          <a href="#registration">Registration</a>
+          <a href="#careers">Careers</a>
+          <button onclick="scrollToRegistration()">Contact Us</button>
+        </nav>
+      </header>
+      <section class="banner">
+        <!-- Left Column -->
+        <div class="banner-left">
+          <img
+            style="margin-bottom: 64px"
+            src="./assets/heading.svg"
+            alt="Andrew Schultz"
+          />
+          <!-- Profile Cards -->
+          <div class="profile-card">
+            <img src="./assets/image1.svg" alt="Andrew Schultz" />
+            <div class="description">
+              <h3>Andrew Schultz</h3>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae,
+                in tristique senectus dui pharetra sit.
+              </p>
+            </div>
+          </div>
+          <div class="profile-card">
+            <img src="./assets/image2.svg" alt="Andrew Schultz" />
+            <div class="description">
+              <h3>Andrew Schultz</h3>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae,
+                in tristique senectus dui pharetra sit.
+              </p>
+            </div>
+          </div>
+          <div class="profile-card">
+            <img src="./assets/image3.svg" alt="Andrew Schultz" />
+            <div class="description">
+              <h3>Andrew Schultz</h3>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae,
+                in tristique senectus dui pharetra sit.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="banner-right">
+          <!-- Image -->
+          <img src="./assets/bannerImage.svg" alt="Banner Image" />
+        </div>
+      </section>
+      <!-- Styled Section with Cards -->
+      <section class="styled-section">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="./assets/lock.svg" alt="Card Image 1" />
+          <div>
+            <h3>24/7 Support</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="./assets/signal.svg" alt="Card Image 1" />
+          <div>
+            <h3>1000+ of reviews</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <img src="./assets/trophy.svg" alt="Card Image 1" />
+          <div>
+            <h3>And more!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Trusted Section -->
+      <section class="trusted-section">
+        <div>
+          <h2>Trusted by</h2>
+          <img src="./assets/line.svg" alt="Line Image" />
+        </div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in
           tristique senectus dui pharetra sit.
         </p>
-
-        <label for="name" class="required">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Enter your name"
-          required
+      </section>
+      <!-- Image Slider Section -->
+      <section class="slider-section">
+        <img
+          class="slider-arrow prev-arrow"
+          src="./assets/chevron-left.svg"
+          alt="Slider Image 1"
+          onclick="prevSlide()"
         />
-        <span id="nameError" class="error"></span>
 
-        <label for="company">Company:</label>
-        <input
-          type="text"
-          id="company"
-          name="company"
-          placeholder="Enter your company name"
-          required
+        <div class="slider-container">
+          <div class="slider-wrapper">
+            <!-- Image 1 -->
+            <div class="slider-item">
+              <img src="./assets/Microsoftlogo.svg" alt="Slider Image 1" />
+            </div>
+            <!-- Image 2 -->
+            <div class="slider-item">
+              <img src="./assets/twitter.svg" alt="Slider Image 2" />
+            </div>
+            <!-- Image 3 -->
+            <div class="slider-item">
+              <img src="./assets/cola.svg" alt="Slider Image 3" />
+            </div>
+            <div class="slider-item">
+              <img src="./assets/Microsoftlogo.svg" alt="Slider Image 3" />
+            </div>
+            <div class="slider-item">
+              <img src="./assets/cola.svg" alt="Slider Image 3" />
+            </div>
+          </div>
+        </div>
+
+        <img
+          class="slider-arrow next-arrow"
+          src="./assets/chevron-right.svg"
+          alt="Slider Image 1"
+          onclick="nextSlide()"
         />
-        <span id="companyError" class="error"></span>
+      </section>
+      <section class="form-section" id="registration">
+        <div class="form-left">
+          <img src="./assets/formImage.svg" alt="Banner Image" />
+        </div>
+        <div class="formContainer">
+          <!-- <div class="form-left">
+  
+            <img src="./assets/formImage.svg" alt="Banner Image" />
+          </div> -->
+          <!-- <div class="form-right"> -->
+          <form id="myForm">
+            <h1>Registration</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in
+              tristique senectus dui pharetra sit.
+            </p>
 
-        <label for="email" class="required">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email address"
-          required
-        />
-        <span id="emailError" class="error"></span>
+            <label for="name" class="required">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+            <span id="nameError" class="error"></span>
 
-        <button type="submit">Submit</button>
-      </form>
+            <label for="company">Company:</label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              placeholder="Enter your company name"
+              required
+            />
+            <span id="companyError" class="error"></span>
+
+            <label for="email" class="required">Email address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <span id="emailError" class="error"></span>
+
+            <button type="submit">Submit</button>
+          </form>
+          <!-- </div> -->
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer>
+        <img src="./assets/logoj.svg" alt="Logo" />
+        <nav>
+          <a href="#about-us">About Us</a>
+          <a href="#registration">Registration</a>
+          <a href="#careers">Careers</a>
+          <button onclick="scrollToRegistration()">Contact Us</button>
+        </nav>
+      </footer>
     </div>
+    <script>
+      let currentIndex = 1; // Start at the second image (index 1)
+      const totalSlides = document.querySelectorAll(".slider-item").length;
 
+      function showSlide(index) {
+        const sliderWrapper = document.querySelector(".slider-wrapper");
+        const slideWidth = document.querySelector(".slider-item").clientWidth;
+        sliderWrapper.style.transform = `translateX(-${index * slideWidth}px)`;
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+      }
+
+      // Initially show the second image
+      showSlide(currentIndex);
+    </script>
+    <script>
+      function scrollToRegistration() {
+        const registrationSection = document.getElementById("registration");
+        registrationSection.scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+    <!-- <script>
+      let currentIndex = 0;
+      const totalSlides = document.querySelectorAll(".slider-item").length;
+
+      function showSlide(index) {
+        const sliderWrapper = document.querySelector(".slider-wrapper");
+        const slideWidth = document.querySelector(".slider-item").clientWidth;
+        sliderWrapper.style.transform = `translateX(-${index * slideWidth}px)`;
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+      }
+
+      // Automatically start the slider
+      setInterval(() => {
+        nextSlide();
+      }, 3000); // Change the interval (in milliseconds) as needed
+    </script> -->
+    <!-- <script>
+      let currentIndex = 0;
+      const totalSlides = document.querySelectorAll(".slider-item").length;
+
+      function showSlide(index) {
+        const sliderWrapper = document.querySelector(".slider-wrapper");
+        const slideWidth = document.querySelector(".slider-item").clientWidth;
+        sliderWrapper.style.transform = `translateX(-${index * slideWidth}px)`;
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+      }
+    </script> -->
     <script>
       document
         .getElementById("myForm")
