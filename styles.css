@@ -193,6 +193,7 @@ button:hover {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-align: left;
 }
 .dolor {
   margin: 0px 2px;
